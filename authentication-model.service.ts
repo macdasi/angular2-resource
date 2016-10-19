@@ -50,10 +50,10 @@ export class AuthenticationModelService extends ModelBaseService<IAuthentication
         let options:any = {headers:null};
 
         options.headers = new Headers({
-            'X-Laas-Application': 7012,
-            'X-Laas-Domain': '.',
-            'X-Laas-Username': encodeURIComponent(username),
-            'X-Laas-Password': encodeURIComponent(username)
+            'X-Application': 'application id',
+            'X-Domain': '.',
+            'X-Username': encodeURIComponent(username),
+            'X-Password': encodeURIComponent(username)
         });
         this.signInInProgress = true;
         this.create(null, null, options).subscribe(data => {
